@@ -10,6 +10,7 @@ public class BirdBase : MonoBehaviour {
     public int parcel;
     public AudioClip cooAudioClip;
     bool played = false;
+    public int delivermorale;
     Transform coop;
 
 	// Use this for initialization
@@ -20,6 +21,7 @@ public class BirdBase : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        delivermorale = 0;
         Vector3 epsilon = new Vector3(1,1,1);
         if(onquest){
             if (played == false)
@@ -37,6 +39,7 @@ public class BirdBase : MonoBehaviour {
             parcel = -1;
             Destroy(transform.GetChild(0).gameObject);
             transform.position = coop.position;
+            delivermorale = 5;
         }
 	}
 }

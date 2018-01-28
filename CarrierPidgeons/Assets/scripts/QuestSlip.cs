@@ -6,6 +6,7 @@ public class QuestSlip : MonoBehaviour {
     public float BufferTime;
     public float Timer;
     public float xpos;
+    public GameObject QuestPopup;
     private float countdown;
     private bool startCount;
 	// Use this for initialization
@@ -39,6 +40,7 @@ public class QuestSlip : MonoBehaviour {
         Debug.Log("clicked");
         transform.position = new Vector3(-10, transform.position.y, 0);
         startCount = true;
+        QuestPopup.SetActive(true);
     }
 
 

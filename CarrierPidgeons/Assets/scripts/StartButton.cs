@@ -4,11 +4,24 @@ using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class StartButton : MonoBehaviour {
+    public AudioClip audioClip;
+    public AudioSource audioSource;
 
 	// Use this for initialization
 	void OnMouseUp () {
         Debug.Log("clicked");
-        SceneManager.LoadScene(1);
+        audioSource.PlayOneShot(audioClip);
+        StartCoroutine(LoadSceneAfterSoundFinishes());
 	}
+
+    private IEnumerator LoadSceneAfterSoundFinishes()
+    {
+        while (audioSource.isPlaying)
+        {
+            yield return new WaitForEndOfFrame();
+        }
+
+        SceneManager.LoadScene(1);
+    }
 	
 }
