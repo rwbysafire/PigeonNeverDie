@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: cf2f3b79bef774871b6ec2edc1646965
+timeCreated: 1517176858
+licenseType: Free
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - target: {instanceID: 0}
+  - cooAudioClip: {fileID: 8300000, guid: d62d81767f4f844f5bbb77bee1958e9e, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
